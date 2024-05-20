@@ -39,7 +39,7 @@ const defaults = Object.freeze({
 const limits = Object.freeze({
   hashLength: { min: 4, max: 2 ** 32 - 1 },
   memoryCost: { min: 1 << 10, max: 2 ** 32 - 1 },
-  timeCost: { min: 2, max: 2 ** 32 - 1 },
+  timeCost: { min: 1, max: 2 ** 32 - 1 },
   parallelism: { min: 1, max: 2 ** 24 - 1 },
 });
 module.exports.limits = limits;
