@@ -84,7 +84,7 @@ async function hash(password, options) {
     const value = rest[key];
     assert(
       min <= value && value <= max,
-      `Invalid ${key}, must be between ${min} and ${max}.`,
+      `Invalid ${key}, must be between ${min} and ${max}.`
     );
   }
 
@@ -157,7 +157,7 @@ module.exports.needsRehash = needsRehash;
 async function verify(
   digest,
   password,
-  { secret } = { secret: Buffer.alloc(0) },
+  { secret } = { secret: Buffer.alloc(0) }
 ) {
   const { id, ...rest } = deserialize(digest);
   if (!(id in types)) {
@@ -184,7 +184,7 @@ async function verify(
       version: +version,
       type: types[id],
     }),
-    hash,
+    hash
   );
 }
 module.exports.verify = verify;
